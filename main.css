@@ -149,7 +149,11 @@
     grid-area: footer;
   }
   
-  .footer-hr { grid-area: footer-hr;}
+  .footer-hr {
+    grid-area: footer-hr;
+    border-top: 3px solid black;
+    width: 100%;
+}
   
   .footer-info {
     grid-area: footer-info;
@@ -157,5 +161,6 @@
     justify-content: center;
     column-gap: 25px;
     padding-right: 40px;
+    padding-top: 40px;
 }
   
