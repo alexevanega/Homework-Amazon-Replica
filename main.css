@@ -34,7 +34,10 @@
   
   .sign-in { grid-area: sign-in; }
   
-  .email { grid-area: email; }
+  .email {
+    grid-area: email;
+    padding-top: 15px;
+}
   
   .email-input { grid-area: email-input;}
 
