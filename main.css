@@ -1,0 +1,158 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.65fr 1fr 0.65fr;
+    grid-template-rows: 0.35fr 0.85fr 0.35fr 0.20fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". mainarea ."
+      ". bottomarea ."
+      "footer footer footer";
+  }
+  
+  .mainarea {
+    display: grid;
+    border: 1px solid slategrey;
+    grid-template-columns: 0.1fr 1fr 0.8fr 0.1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . ."
+      ". sign-in . ."
+      ". email . ."
+      ". email-input email-input ."
+      ". password forgot-password ."
+      ". password-input password-input ."
+      ". continue continue ."
+      ". need-help . ."
+      ". . . .";
+    grid-area: mainarea;
+  }
+  
+  .sign-in { grid-area: sign-in; }
+  
+  .email { grid-area: email; }
+  
+  .email-input { grid-area: email-input;}
+
+.email-input input {
+    width: 100%;
+}
+  
+  .password {
+    grid-area: password;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+  
+  .forgot-password {
+    grid-area: forgot-password;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 75px;
+}
+
+.forgot-password a {
+    text-decoration: none;
+}
+  
+  .password-input { grid-area: password-input; }
+
+  .password-input input {
+      width: 100%;
+  }
+  
+  .continue {
+    grid-area: continue;
+    display: flex;
+    justify-content: center;
+    border: .5px solid rgb(214, 163, 100);
+    background-color: rgba(255, 166, 0, 0.664);
+    padding-top: 5px;
+    height: 35px;
+}
+
+.continue a {
+    text-decoration: none;
+    color: black;
+}
+  
+.need-help {
+    grid-area: need-help;
+    padding-top: 10px;
+}
+
+.need-help li {
+    list-style-type: square;
+}
+  
+  .bottomarea {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      "hr1 new hr2"
+      "create-account create-account create-account"
+      ". . .";
+    grid-area: bottomarea;
+  }
+  
+  .hr1 { grid-area: hr1; }
+  
+  .new {
+    grid-area: new;
+    padding-left: 8px;
+}
+
+.new a{
+    text-decoration: none;
+    color: slategrey;
+}
+  
+  .hr2 { grid-area: hr2; }
+  
+  .create-account {
+    grid-area: create-account;
+    margin-top: 5px;
+    height: 35px;
+    padding-top: 3px;
+    border: 1px solid slategrey;
+    background-color: rgba(128, 128, 128, 0.226);
+    display: flex;
+    justify-content: center;
+}
+
+.create-account a {
+    text-decoration: none;
+    color: black;
+}
+  
+  .footer {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.50fr;
+    grid-template-rows: .3fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "footer-hr footer-hr footer-hr"
+      ". footer-info .";
+    grid-area: footer;
+  }
+  
+  .footer-hr { grid-area: footer-hr;}
+  
+  .footer-info {
+    grid-area: footer-info;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    padding-right: 40px;
+}
+  
